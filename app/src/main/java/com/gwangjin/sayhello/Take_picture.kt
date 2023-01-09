@@ -19,7 +19,6 @@ class Take_picture : AppCompatActivity() {
             Log.d(TAG, "$count_picture 회 촬영하였습니다")
             counterofpic.setText("$count_picture / 8 회 촬영하였습니다.")
             if (count_picture == 8){
-                Log.d(TAG, "왜안들어오지")
                 counterofpic.setText("촬영을 완료하였습니다.")
                 takeonePicture.setText("편집하기")
 //                takeonePicture.setOnClickListener{
