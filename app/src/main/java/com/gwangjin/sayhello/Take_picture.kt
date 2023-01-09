@@ -1,8 +1,11 @@
 package com.gwangjin.sayhello
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
 import kotlinx.android.synthetic.main.takepicture.*
 
 class Take_picture : AppCompatActivity() {
@@ -21,12 +24,23 @@ class Take_picture : AppCompatActivity() {
             if (count_picture == 8){
                 counterofpic.setText("촬영을 완료하였습니다.")
                 takeonePicture.setText("편집하기")
+                takeonePicture.setVisibility(View.INVISIBLE)
+                goedit.setVisibility(View.VISIBLE)
+                goedit.setEnabled(true)
+                takeonePicture.setEnabled(false)//startActivity((Intent(this@Take_picture,Edit_picture::class.java)))
 //                takeonePicture.setOnClickListener{
 //                    Log.d(TAG, "move to takePicture page")
 //                    startActivity(Intent(this@Take_picture,Edit_picture::class.java))
 //                }
             }
         }
+
+        goedit.setOnClickListener {
+            Log.d(TAG, "move to takePicture page")
+            startActivity(Intent(this@Take_picture,Edit_picture::class.java))
+        }
+
+
 
 
     }
