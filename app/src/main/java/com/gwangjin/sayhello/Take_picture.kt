@@ -17,7 +17,7 @@ class Take_picture : AppCompatActivity() {
         takeonePicture.setOnClickListener {
             count_picture += 1
             Log.d(TAG, "$count_picture 회 촬영하였습니다")
-            counterofpic.setText("$count_picture / 8회 촬영하였습니다.")
+            counterofpic.setText("$count_picture / 7회 촬영하였습니다.")
             if (count_picture == 8){
                 counterofpic.setText("촬영을 완료하였습니다.")
                 takeonePicture.setText("편집하기")
